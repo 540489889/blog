@@ -6,7 +6,7 @@ import router from './router'
 import fastClick from 'fastclick'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min'
-// import './assets/styles/currency.css'
+import './assets/styles/currency.css'
 import './assets/styles/border.css'
 fastClick.attach(document.body)
 Vue.config.productionTip = false
