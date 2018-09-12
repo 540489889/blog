@@ -42,7 +42,7 @@ export default {
         display: block;
         top:50%;
         margin-top:-15px;
-        left:30px;
+        left:15px;
         a{
           display: block;
           img{
