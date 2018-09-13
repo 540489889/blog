@@ -1,26 +1,34 @@
 <template>
   <div>
-    <div class="homeBanner">
-      <div class="container-fluid bannerBg element-img"></div>
+    <div class="homeBanner" ref="heightBlack">
+      <div class="container-fluid bannerBg element-img">
+        <div class="bannerContent"></div>
+      </div>
     </div>
+    <!--<div class="heightBlack" ref="heightBlack"></div>-->
   </div>
 </template>
 <script>
 export default {
-  name: 'homeBanner'
+  name: 'homeBanner',
+  mounted () {
+    const height = document.body.offsetHeight
+    this.$refs.heightBlack.style.height = height + 'px'
+  }
 }
 </script>
 
 <style scoped lang="less">
   .homeBanner{
-    position:fixed;
+    position:relative;
     top:0;
     left:0;
     width:100%;
-    height:100%;
+    /*height:100vh;*/
     .bannerBg{
-      background:url(../../../assets/img/bg.jpg) no-repeat center center fixed;
+      background:url(../../../assets/img/bg1.jpeg) no-repeat center center fixed;
       background-size:cover;
+      .bannerContent{}
     }
     .element-img{
       -webkit-background-size: cover;

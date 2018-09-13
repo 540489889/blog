@@ -20,7 +20,9 @@
         </div>
         <nav class="navbar navbar-dark">
           <button class="navbar-toggler" @click="menuClick" type="button">
-            <span class="navbar-toggler-icon"></span>
+            <span class="icon-bar before"></span>
+            <span class="icon-bar main"></span>
+            <span class="icon-bar after"></span>
           </button>
         </nav>
       </div>
@@ -32,16 +34,38 @@
     border:none;
   }
   .pos-f-t{
-    .navbar{
+    .navbar-dark{
       z-index: 12;
       position:fixed;
       right:15px;
-      top:15px;
+      top:22px;
       padding:0;
       .navbar-toggler{
         border:none;
         padding:0;
         background:none;
+        color:black;
+        .icon-bar{
+          -webkit-border-radius: 0;
+          -moz-border-radius: 0;
+          border-radius: 0;
+          background-color: #151515;
+          -webkit-transition: all ease 0.2s;
+          -moz-transition: all ease .2s;
+          -o-transition: all ease .2s;
+          transition: all ease .2s;
+        }
+        .before{
+          margin-bottom:4px;
+        }
+        .after{
+          margin-top:4px;
+        }
+        .before, .main, .after{
+          display: block;
+          width: 22px;
+          height: 2px;
+        }
       }
     }
     #navbarToggleExternalContent{

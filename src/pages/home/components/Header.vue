@@ -1,6 +1,6 @@
 <template>
     <div>
-      <div class="navBar">
+      <div class="navBar" ref="navBar">
         <div class="navHeader">
           <div class="container">
             <div class="logo">
@@ -22,6 +22,21 @@
 <script>
 export default {
   name: 'homeHeader'
+  // mounted () {
+  //   const that = this
+  //   window.onscroll = function () {
+  //     let t = document.documentElement.scrollTop || document.body.scrollTop
+  //     let vh = 1
+  //     const tvh = t + vh
+  //     if (tvh > t) {
+  //       that.$refs.navBar.style.top = '-60px'
+  //       that.$refs.navBar.style.opacity = 0
+  //     } else {
+  //       that.$refs.navBar.style.top = '0'
+  //       that.$refs.navBar.style.opacity = 1
+  //     }
+  //   }
+  // }
 }
 </script>
 <style scoped lang="less">
@@ -31,7 +46,12 @@ export default {
     margin-bottom:20px;
     width:100%;
     z-index: 10;
-    background-color:rgba(255,255,255,0.6);
+    top:0;
+    left:0;
+    opacity: 1;
+    background-color:rgba(255,255,255,0.8);
+    /*-webkit-transition: opacity,top 500ms linear;*/
+    /*transition: opacity,top 500ms linear;*/
     .navHeader{
       background-color:transparent;
       -webkit-transition: background-color 400ms linear;
