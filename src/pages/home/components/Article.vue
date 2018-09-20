@@ -70,6 +70,10 @@
             <div class="nogutter"></div>
           </div>
         </div>
+        <div class="pagination">
+          <a href="" class="float-left">← Newer Posts</a>
+          <a href="" class="float-right">Older Posts →</a>
+        </div>
       </div>
     </div>
   </div>
@@ -79,19 +83,33 @@ export default {
   name: 'homeArticle'
 }
 </script>
-
 <style scoped lang="less">
   .article{
     background-color:white;
     position:relative;
     padding-top:60px;
     z-index: 4;
+    .pagination{
+      display: block;
+      padding-left: 0;
+      margin: 20px 0;
+      border-radius: 4px;
+      overflow: hidden;
+      a{
+        color: #151515;
+        text-decoration: none;
+      }
+    }
+    .pagination::after{
+      clear:both;
+    }
     .article-title{
       font-style: normal;
       font-weight: 400;
-      line-height: 37px;
-      font-size: 20px;
+      line-height: 1.6;
+      font-size: 18px;
       margin-top: 0;
+      margin-bottom:10px;
     }
     .article-text{
       color:#666;

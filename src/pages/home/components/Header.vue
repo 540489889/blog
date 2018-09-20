@@ -21,22 +21,28 @@
 </template>
 <script>
 export default {
-  name: 'homeHeader'
-  // mounted () {
-  //   const that = this
-  //   window.onscroll = function () {
-  //     let t = document.documentElement.scrollTop || document.body.scrollTop
-  //     let vh = 1
-  //     const tvh = t + vh
-  //     if (tvh > t) {
-  //       that.$refs.navBar.style.top = '-60px'
-  //       that.$refs.navBar.style.opacity = 0
-  //     } else {
-  //       that.$refs.navBar.style.top = '0'
-  //       that.$refs.navBar.style.opacity = 1
-  //     }
-  //   }
-  // }
+  name: 'homeHeader',
+  mounted () {
+    // function scroll (fn) {
+    //   let beforeScrollTop = document.body.scrollTop
+    //   fn = fn || function () {}
+    //   window.addEventListener('scroll', function () {
+    //     let afterScrollTop = document.documentElement.scrollTop || document.body.scrollTop
+    //     let delta = afterScrollTop - beforeScrollTop
+    //     if (delta === 0) return false
+    //     fn(delta > 0 ? 'down' : 'up')
+    //     beforeScrollTop = afterScrollTop
+    //   }, false)
+    // }
+    // const that = this
+    // scroll(function (direction) {
+    //   if (direction == 'down') {
+    //     console.log(that.$refs.navBar.style.top)
+    //     that.$refs.navBar.style.top = '0'
+    //     that.$refs.navBar.style.opacity = 1
+    //   }
+    // })
+  }
 }
 </script>
 <style scoped lang="less">
@@ -49,9 +55,9 @@ export default {
     top:0;
     left:0;
     opacity: 1;
-    background-color:rgba(255,255,255,0.8);
-    /*-webkit-transition: opacity,top 500ms linear;*/
-    /*transition: opacity,top 500ms linear;*/
+    background-color:white;
+    -webkit-transition: opacity,top 500ms linear;
+    transition: opacity,top 500ms linear;
     .navHeader{
       background-color:transparent;
       -webkit-transition: background-color 400ms linear;
